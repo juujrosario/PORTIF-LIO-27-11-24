@@ -1,0 +1,336 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    background-color: #6c4f75;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Espaçamento entre os links */
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Links da Navbar */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transição suave para todos os efeitos */
+}
+
+/* Efeitos de Hover */
+nav ul li a:hover {
+    color: #f9d8e0; /* Cor de texto quando passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    background-color: #9b7e9d; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao passar o mouse */
+}
+
+/* Estilo do foco (para acessibilidade) */
+nav ul li a:focus {
+    outline: 3px solid #f9d8e0; /* Destaque de foco para navegação com teclado */
+    outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Empilha os itens da navbar para telas menores */
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.5em; /* Aumenta o tamanho da fonte em telas menores */
+    }
+}
+
+/* Home */
+#home {
+    background-color: #f9d8e0;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3em;
+    color: #6c4f75;
+}
+
+#home p {
+    font-size: 1.5em;
+    color: #a07d91;
+}
+
+button {
+    background-color: #6c4f75;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b7e9d;
+}
+/* Sobre Mim */
+#sobre {
+    padding: 60px 20px;
+   
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 2.5em;
+    color: #6c4f75;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sobre-texto {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* Competências */
+.competencias-lista {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.competencias-lista li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.competencias-lista li strong {
+    color: #6c4f75;
+    font-size: 1.2em;
+}
+
+/* Melhorando o layout para dispositivos menores */
+@media (max-width: 768px) {
+    .sobre-texto {
+        font-size: 1.1em;
+    }
+}
+/* Estilização da seção de Skills */
+.skills {
+    margin-top: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+.skills-title {
+    font-size: 1.5em;
+    color: #6c4f75;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Estilização do parágrafo com o texto descritivo */
+.skills-description {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Estilização para a lista de habilidades */
+.skills ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+    text-align: center;
+    flex: 1 1 200px; /* Faz com que as listas se ajustem para diferentes tamanhos de tela */
+}
+
+
+/* Seções */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.skills div {
+    width: 200px;
+    text-align: left;
+}
+.imagem-estilizada {
+    width: 80%; /* Tamanho da imagem, 80% da largura da tela */
+    max-width: 500px; /* Limite máximo de largura */
+    height: auto; /* Mantém a proporção */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.imagem-estilizada:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem */
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    color: #6c4f75;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-card a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #6c4f75;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #9b7e9d;
+}
+
+/* Botões de Contato */
+#contatos .social-links a {
+    margin: 0 15px;
+}
+
+#contatos img {
+    width: 40px;
+    height: 40px;
+    background-color: #f9d8e0;
+}
+
+#contatos h2 {
+    color: #6c4f75;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#contatos p {
+    color: #a07d91;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contatos-lista li a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #6c4f75;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contatos-lista li a:hover {
+    background-color: #9b7e9d;
+    transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+/* Rodapé */
+footer {
+    background-color: #6c4f75;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #f9d8e0;
+    text-de
+}
